@@ -30,14 +30,15 @@ struct FallbackGlassButtonStyle: ButtonStyle {
             .overlay {
                 Capsule().stroke(
                     LinearGradient(colors: [
-                        Color.white.opacity(0.5),
-                        Color.white.opacity(0.3)
-                    ], startPoint: .top, endPoint: .bottom
+                        Color.white.opacity(0.4),
+                        Color.white.opacity(0.1),
+                        Color.white.opacity(0.4)
+                    ], startPoint: .topLeading, endPoint: .bottomTrailing
                     ), lineWidth: 1
                 )
             }.overlay {
                 Capsule().fill(Color.white.opacity(
-                    configuration.isPressed ? 0.3 : 0
+                    configuration.isPressed ? 0.4 : 0
                 ))
             }
             .shadow(color: .black.opacity(0.2), radius: 16, y: 4)
